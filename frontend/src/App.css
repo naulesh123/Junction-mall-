@@ -1,3 +1,7 @@
 .navbar_one{
     opacity: 0.4;
 }
+
+input[type='file']{
+display: none;
+}

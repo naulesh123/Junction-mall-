@@ -35,6 +35,7 @@ import {
 import { GiForkKnifeSpoon } from 'react-icons/gi';
 import Video_f1 from "./Video_f1";
 import Video_f1_Ent from "./Video_f1_Ent";
+import Video_f1_Food from "./Video_f1_Food";
 
 
  
@@ -409,7 +410,7 @@ function NavListMenu_for_Food() {
               variant="gradient"
               className="col-span-3 grid h-full w-full place-items-center rounded-md"
             >
-              <RocketLaunchIcon strokeWidth={1} className="h-28 w-28" />
+              <Video_f1_Food strokeWidth={1} className="h-28 w-28" />
             </Card>
             <ul className="col-span-4 flex w-full flex-col gap-1">
               {renderItems}
