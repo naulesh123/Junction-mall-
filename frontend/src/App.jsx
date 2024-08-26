@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router ,Routes, Route} from 'react-router-dom';
+import {Directory} from './Pages/Directory' 
+
 import { Button, Navbar } from '@material-tailwind/react';
 import {ComplexNavbar} from './Components/Navbar';
 import GalleryIcon from './Components/Text';
@@ -12,14 +15,28 @@ import Career2 from './Pages/Career2'
 function App() {
   return (
     <>
-        <ComplexNavbar/>
+    <ComplexNavbar/>
+    <div>
+      
+      <Routes>
+        <Route path="/" element={<Video_f1 />} />
+        <Route path="/Directory" element={<Directory />} />
+        <Route path="/Career" element={<Career2 />} />
+        <Route path="/Services" element={<Services/>} />
+      </Routes>
+      
+    </div>
+
+
+
+        {/* <ComplexNavbar/> */}
       {/* <GalleryIcon/> */}
         {/* <Video_f1/> */}
         {/* <MyMapComponent/> */}
         {/* <Services_cards/> */}
 
 
-        <Career2/>
+        {/* <Career2/> */}
 
         {/* <Services/> */}
       
