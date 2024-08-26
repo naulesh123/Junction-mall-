@@ -36,10 +36,9 @@ import { GiForkKnifeSpoon } from 'react-icons/gi';
 import Video_f1 from "./Video_f1";
 import Video_f1_Ent from "./Video_f1_Ent";
 import Video_f1_Food from "./Video_f1_Food";
-import { useNavigate } from "react-router-dom";
 
 
-
+ 
 // profile menu component
 const profileMenuItems = [
   {
@@ -65,7 +64,6 @@ const profileMenuItems = [
 ];
  
 function ProfileMenu() {
-  const navigate=useNavigate();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
  
   const closeMenu = () => setIsMenuOpen(false);
@@ -169,6 +167,7 @@ const navListMenuItems = [
       "A complete set of UI Elements for building faster websites in less time.",
   },
 ];
+
 const Navlist_items_movies=[
     {
         title: "Multiplex Bioscope",
@@ -206,7 +205,10 @@ const Navlist_items_food=[
       },
 
 
-];
+]
+
+
+
 const Navlist_items_Corporate=[
     {
         title: "About Us",
@@ -240,7 +242,7 @@ const Navlist_items_Corporate=[
       },
 
 
-];
+]
 
 
 
@@ -495,10 +497,13 @@ const navListItems = [
     label: "Services",
     icon: CogIcon ,
   },
+//   {
+//     label: "Blocks",
+//     icon: CubeTransparentIcon,
+//   },
 ];
  
 function NavList() {
-  const navigate=useNavigate();
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavListMenu />
@@ -508,15 +513,7 @@ function NavList() {
         <Typography
           key={label}
           as="a"
-          // href={`/${label}`}
-          
-          onClick={()=>{
-            if(label=="Services"){navigate('/Services')}
-            else if (label=="Gallery"){navigate('/Gallery')}
-          }}
-
-
-
+          href="#"
           variant="small"
           color="gray"
           className="font-medium text-blue-gray-500"
@@ -533,7 +530,6 @@ function NavList() {
 }
  
 export function ComplexNavbar() {
-  const navigate=useNavigate();
   const [isNavOpen, setIsNavOpen] = React.useState(false);
  
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
@@ -550,9 +546,8 @@ export function ComplexNavbar() {
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          // href="/"
+          href="#"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
-          onClick={()=>{navigate('/')}}
         >
           Junction Mall 
         </Typography>
