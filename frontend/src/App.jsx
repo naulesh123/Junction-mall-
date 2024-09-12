@@ -11,6 +11,7 @@ import Services from './Pages/Services';
 // import {MyMapComponent} from './Components/Maps'
 import { Careers } from './Components/Careers';
 import Career2 from './Pages/Career2'
+import Gallery from './Pages/Gallery';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
         <Route path="/Directory" element={<Directory />} />
         <Route path="/Career" element={<Career2 />} />
         <Route path="/Services" element={<Services/>} />
+        <Route path="/Gallery" element={<Gallery/>} />
       </Routes>
-      
+       
     </div>
 
 
